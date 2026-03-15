@@ -15,24 +15,24 @@ header {
     background-color: #282BF8;
 }
 
-h1{
-    font-size: 64px;
+header h1{
+    font-size: 4rem;
     color: #111111;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    gap: 50px;
-    font-size: 30px;
+    gap: 3.1rem;
+    font-size: 1.8rem;
     list-style: none;
     padding: 0;
 }
 
-nav a:not(#lang_botton){
+nav a:not(#lang_botton) {
     text-decoration: none;
-    border: 2px solid #111111;
-    border-radius: 5px;
+    border: 0.1rem solid #111111;
+    border-radius: 0.3rem;
     color: #111111;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
@@ -51,13 +51,13 @@ nav a:hover:not(#lang_botton) {
 }
 
 .text_content{
-    font-size: 30px;
+    font-size: 1.8rem;
     color: #111111;
 }
 
 .profile_img {
-    width: 500px;
-    border-radius: 100px;
+    max-width: 500px;
+    border-radius: 6.2rem;
 }
 
 ol a {
@@ -78,19 +78,18 @@ footer {
     align-items: center;
     color: #111111;
     background: #282BF8;
-    gap: 50px;
+    gap: 3.1rem;
 }
 
 footer p {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
-
 
 footer ul {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    font-size: 36px;
+    gap: 3.1rem;
+    font-size: 2.2rem;
     list-style: none;
     padding: 0;
 }
@@ -98,7 +97,7 @@ footer ul {
 footer a {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.6rem;
 }
 
 /* LANGUAGE MENU */
@@ -107,9 +106,9 @@ footer a {
     display: flex;
     justify-content: center;
     position: relative;
-    border: 2px solid #111111;
-    border-radius: 5px;
-    padding: 2px 15px;
+    border: 0.1rem solid #111111;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.9rem;
 }
 
 .lang_dropdown {
@@ -124,12 +123,12 @@ footer a {
 .lang_dropdown li a {
     text-decoration: none;
     display: block;
-    border: 2px solid #111111;
-    border-radius: 5px;
-    padding: 2px 15px;
+    border: 0.1rem solid #111111;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.9rem;
     background: #F5F7FF;
     color: #111111;
-    border-radius: 5;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .lang_dropdown li a:hover {
