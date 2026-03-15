@@ -1,3 +1,4 @@
+/* BODY */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -117,7 +118,6 @@ footer a {
     list-style: none;
     top: 100%;
     z-index: 1000;
-
 }
 
 .lang_dropdown li a {
