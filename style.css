@@ -30,17 +30,19 @@ nav ul {
     padding: 0;
 }
 
-nav a:not(#lang_botton) {
+nav a:not(.lang_botton) {
+    display: inline-block;
     text-decoration: none;
     border: 0.1rem solid #111111;
     border-radius: 0.3rem;
     color: #111111;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
-nav a:hover:not(#lang_botton) {
+nav a:hover:not(.lang_botton) {
     color: #5A6BFF;
     border-color: #5A6BFF;
+    transform: scale(1.15);
 }
 
 /* MAIN */
@@ -62,13 +64,16 @@ nav a:hover:not(#lang_botton) {
 }
 
 ol a {
+    display: inline-block;
     text-decoration: none;
     color: #111111;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease, margin 0.3s ease;
 }
 
 ol a:hover {
     color: #5A6BFF;
+    transform: scale(1.1);
+    margin: 0 0.7rem;
 }
 
 /* FOOTER */
@@ -77,13 +82,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #111111;
+    color: #000000;
     background: #282BF8;
     gap: 3.1rem;
 }
 
 footer p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 footer ul {
@@ -99,6 +104,11 @@ footer a {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover {
+    transform: scale(1.25);
 }
 
 /* LANGUAGE MENU */
@@ -107,9 +117,23 @@ footer a {
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+.botton1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
     border: 0.1rem solid #111111;
     border-radius: 0.3rem;
     padding: 0.1rem 0.9rem;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, margin 0.3s ease;
+}
+
+.botton1:hover {
+    color: #5A6BFF;
+    background: white; 
+    transform: scale(1.15);
+    margin-bottom: 0.1rem;
 }
 
 .lang_dropdown {
@@ -122,18 +146,21 @@ footer a {
 
 .lang_dropdown li a {
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    min-width: 2.5rem;
     border: 0.1rem solid #111111;
     border-radius: 0.3rem;
     padding: 0.1rem 0.9rem;
     background: #F5F7FF;
     color: #111111;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, margin 0.3s ease;
 }
 
 .lang_dropdown li a:hover {
     background: #5A6BFF;
     color: white;
+    transform: scale(1.15);
+    margin: 0.1rem 0;
 }
 
 .lang_menu:hover .lang_dropdown {
