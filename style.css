@@ -11,29 +11,32 @@ body {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #282BF8;
 }
 
 header h1{
-    font-size: 4rem;
+    font-size: clamp(1.5rem, 4vw, 4rem);
     color: #111111;
+    margin: clamp(0.4rem, 2vw, 2rem);
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    gap: 3.1rem;
-    font-size: 1.8rem;
+    gap: clamp(0.8rem, 4vw, 3.5rem);
+    font-size: clamp(0.8rem, 1.75vw, 1.8rem);
     list-style: none;
     padding: 0;
+    margin: clamp(0.4rem, 2vw, 2rem);
 }
 
 nav a:not(.lang_botton) {
     display: inline-block;
     text-decoration: none;
-    border: 0.1rem solid #111111;
+    border: 0.06rem solid #111111;
     border-radius: 0.3rem;
     color: #111111;
     transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
@@ -54,13 +57,13 @@ nav a:hover:not(.lang_botton) {
 }
 
 .text_content{
-    font-size: 1.8rem;
+    font-size: clamp(0.1rem, 3vw, 2rem);
     color: #111111;
 }
 
 .profile_img {
-    max-width: 500px;
-    border-radius: 6.2rem;
+    max-width: clamp(10rem, 30vw, 31.25rem);
+    border-radius: clamp(1rem, 5vw, 6.2rem);
 }
 
 ol a {
@@ -84,19 +87,20 @@ footer {
     align-items: center;
     color: #000000;
     background: #282BF8;
-    gap: 3.1rem;
 }
 
 footer p {
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 1.75vw, 1.4rem);
+    margin: clamp(0.5rem, 2.5vw, 1.6rem);
 }
 
 footer ul {
     display: flex;
     justify-content: center;
-    gap: 3.1rem;
-    font-size: 2.2rem;
+    gap: clamp(1.5rem, 3vw, 3.1rem);
+    font-size: clamp(0.5rem, 1.5vw, 1.6rem);
     list-style: none;
+    margin: clamp(0.5rem, 2vw, 1.6rem);
     padding: 0;
 }
 
@@ -114,43 +118,54 @@ footer a:hover {
 /* LANGUAGE MENU */
 
 .lang_menu {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     position: relative;
+}
+
+.lang_checkbox {
+    display: none;
 }
 
 .botton1 {
     display: flex;
     justify-content: center;
-    position: relative;
-    border: 0.1rem solid #111111;
+    align-items: center;
+    width: clamp(2rem, 5vw, 4.5rem); 
+    border: 0.06rem solid #111111;
     border-radius: 0.3rem;
-    padding: 0.1rem 0.9rem;
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, margin 0.3s ease;
+    text-decoration: none;
+    color: #111111;
+    cursor: pointer;
+    user-select: none; 
 }
 
-.botton1:hover {
+.lang_checkbox:checked ~ .botton1 {
     color: #5A6BFF;
-    background: white; 
-    transform: scale(1.15);
-    margin-bottom: 0.1rem;
+    border-color: #5A6BFF;
 }
 
 .lang_dropdown {
-    display: none;
+    display: none;  
     position: absolute;
-    list-style: none;
     top: 100%;
-    z-index: 1000;
+    left: 0;
+    width: clamp(2rem, 5vw, 4.5rem); 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: transparent; 
+    z-index: 10;
 }
 
 .lang_dropdown li a {
     text-decoration: none;
-    display: inline-block;
-    min-width: 2.5rem;
-    border: 0.1rem solid #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    border: 0.06rem solid #111111;
     border-radius: 0.3rem;
-    padding: 0.1rem 0.9rem;
     background: #F5F7FF;
     color: #111111;
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, margin 0.3s ease;
@@ -159,10 +174,37 @@ footer a:hover {
 .lang_dropdown li a:hover {
     background: #5A6BFF;
     color: white;
-    transform: scale(1.15);
-    margin: 0.1rem 0;
 }
 
-.lang_menu:hover .lang_dropdown {
+.lang_checkbox:checked ~ .lang_dropdown {
     display: block;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+    .content{
+        flex-wrap: wrap;
+    }
+    .text_content{
+        order: 2;
+    }
+    .profile_img{
+        order: 1;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 800px) {
+    footer{
+        flex-wrap: wrap;
+        padding: 0;
+    }
+}
+
+@media (max-width: 673px) {
+    header h1{
+        margin: clamp(0.4rem, 2vw, 2rem) clamp(0.4rem, 2vw, 2rem) 0 clamp(0.4rem, 2vw, 2rem);
+    }
 }
