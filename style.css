@@ -203,7 +203,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 673px) {
+@media (max-width: 632px) {
     header h1{
         margin: clamp(0.4rem, 2vw, 2rem) clamp(0.4rem, 2vw, 2rem) 0 clamp(0.4rem, 2vw, 2rem);
     }
